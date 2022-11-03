@@ -12,10 +12,12 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
         crossorigin="anonymous">
     <!-- Site CSS -->
-    <link rel="stylesheet" href="assets/site.css"> 
+    <link rel="stylesheet" href="assets/style.css"> 
     
     <!-- Vue.JS v.3 -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>     
+    <!-- Site Scripts-->
+    <script src="assets/scripts.js"></script>
 </head>
 <body>
     <div class="container">
@@ -63,10 +65,14 @@
             <!-- Rodapé -->
             <div class="row">
                 <div class="col-md-8">
-                    <img src="" alt="linkedin">
+                    <span class="sp-ftr">Seguir</span>
+                    <a href="https://www.linkedin.com/in/gil-cunha-7352b283" target="_blank">
+                        <img src="assets/images/linkedin.svg" alt="linkedin" width="4%">
+                    </a>
                 </div>
                 <div class="col-md-4">
-                    <span>YYYY Gil Cunha</span>
+                    <span id="year"></span>
+                    <span>Gil Cunha</span>
                 </div>                
             </div>
         </footer>
