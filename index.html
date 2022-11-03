@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="assets/style.css"> 
     
     <!-- Vue.JS v.3 -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>     
-    <!-- Site Scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>  
+    <!-- Site Scripts -->
     <script src="assets/scripts.js"></script>
 </head>
 <body>
@@ -49,7 +49,13 @@
                         <span>Gil Cunha</span>
                         <article>
                             <h4>Titulo opção Escolhida</h4>
-                            <p>Conteúdo</p>           
+                            <p>Conteúdo</p>  
+
+                            <div id="app">
+                                <p>{{ message }}</p>
+                                <p>{{ summary }}</p>
+                            </div>                                     
+
                         </article>
                     </section>
                 </div>
@@ -79,6 +85,19 @@
             </div>
         </footer>
     </div>
+
+    <!-- Vue Scripts -->
+    <script>
+        const myVue = new Vue(
+            {
+                el: '#app',
+                data: { 
+                    message: 'Olá, Vue.js!',
+                    summary: 'A minha primeira aplicação Vue.'
+                }
+            }
+        )        
+    </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
