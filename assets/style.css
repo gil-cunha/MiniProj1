@@ -11,6 +11,10 @@
 }
 
 .bg-2{
+    margin-top: 1em;
+}
+
+.bg-3{
     background-color: #343a40;
     color: #ffffff;
     text-align: left;

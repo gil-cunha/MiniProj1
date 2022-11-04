@@ -14,11 +14,11 @@
     <!-- Site CSS -->
     <link rel="stylesheet" href="assets/style.css"> 
     
-    <!-- Vue.JS v.3 -->
+    <!-- Vue.JS v2.6.0 -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
     <!-- Site Scripts -->
     <script src="assets/scripts/functions.js"></script>
-    <script src="assets/scripts/calllbacks.js"></script>
+    <script src="assets/scripts/callbacks.js"></script>
 </head>
 <body>
     <div class="container" id="app">
@@ -45,32 +45,36 @@
         <div class="container-fluid bg-1">
             <div class="row">
                 <div class="col-sm-8">
-                    <section>
+                    <section class="bg-2">
                         <!-- Secção de conteúdos dinâmicos -->
                         <span>Gil Cunha</span>
                         <article>
-                            <h4>Titulo opção Escolhida</h4>
-                            <p>Conteúdo</p>  
-
-                            <div>
-                                <p>{{ message }}</p>
-                                <p>{{ summary }}</p>
-                            </div>                                     
-
+                            <h4 id="articleTitle">Quem Sou Eu</h4>
+                            <p id="articleContent">{{ message }}</p>  
                         </article>
                     </section>
                 </div>
                 <div class="col-sm-4">
-                    <aside>
+                    <aside class="bg-2">
                         <!-- Informação sobre o site -->
-                        <h4>Informação sobre o site</h4>
-                        <p>Texto informativo sobre o site</p>
+                        <h4>Ol@</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non leo a purus lobortis convallis. 
+                            Nunc in est scelerisque est pellentesque interdum nec ut augue. Nulla facilisi. 
+                            Praesent a arcu ultricies, bibendum eros at, aliquam erat. Duis interdum eget odio in vestibulum. 
+                            Integer hendrerit odio sit amet odio lacinia porttitor. Aenean eleifend a augue et lobortis. 
+                            Mauris lacinia diam ut felis sollicitudin consequat. Ut commodo auctor hendrerit. 
+                            Cras ante sapien, dapibus id ante vitae, iaculis malesuada lorem. 
+                            Ut venenatis velit ac purus eleifend, ut dictum lectus dignissim. Ut volutpat scelerisque egestas. 
+                            Morbi orci felis, cursus sed malesuada eu, lobortis ac magna. In sit amet magna quis sem venenatis laoreet. 
+                            Fusce quis lectus enim. Donec magna nulla, tincidunt mattis nibh non, hendrerit porttitor dolor.                            
+                        </p>
                     </aside>
                 </div>
             </div>
         </div>
         
-        <footer class="container bg-2">
+        <footer class="container bg-3">
             <!-- Rodapé -->
             <div class="row">
                 <div class="col-md-8">
