@@ -15,12 +15,14 @@
     <link rel="stylesheet" href="assets/style.css"> 
     
     <!-- Vue.JS v.3 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
     <!-- Site Scripts -->
-    <script src="assets/scripts/js-scripts.js"></script>
+    <script src="assets/scripts/scripts.js"></script>
+    <script src="assets/scripts/callbacks.js"></script>
+    <script src="assets/scripts/vue.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="app">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <!-- Barra de navegação -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,13 +31,13 @@
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav justify-content-center">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">QUEM SOU EU<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#" v-on:click="whoAmI()">QUEM SOU EU<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">O QUE FAÇO</a>
+                    <a class="nav-link" href="#" v-on:click="whatIDo">O QUE FAÇO</a>
                 </li>           
                 <li class="nav-item">
-                    <a class="nav-link" href="#">HOBBIES</a>
+                    <a class="nav-link" href="#" v-on:click="hobbies">HOBBIES</a>
                 </li>
                 </ul>
             </div>
@@ -51,7 +53,7 @@
                             <h4>Titulo opção Escolhida</h4>
                             <p>Conteúdo</p>  
 
-                            <div id="app">
+                            <div>
                                 <p>{{ message }}</p>
                                 <p>{{ summary }}</p>
                             </div>                                     
