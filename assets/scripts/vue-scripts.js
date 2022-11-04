@@ -7,7 +7,12 @@ const myVue = new Vue(
             title: whoAmITitle,
             content: whoAmIContent,
             eventname: "click",
-        }
+        },
+        methods: {
+            updateArticle: function(title, content){
+                myVue.title = title
+                myVue.content = content
+            } 
+        } 
     }
-)  
-
+) 

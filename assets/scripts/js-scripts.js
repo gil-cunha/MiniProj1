@@ -15,11 +15,6 @@ window.onload = function(){
     setYear()   
 }
 
-function updateArticle(title, content){
-    document.getElementById("articleTitle").innerHTML = title
-    document.getElementById("articleContent").innerHTML = content
-} 
-
 // Functions
 function setYear(){
     const el = document.getElementById("year")
