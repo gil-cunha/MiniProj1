@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-    <title>Document</title>
+    <title>Site Pessoal</title>
     <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -17,26 +17,25 @@
     <!-- Vue.JS v2.6.0 -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
     <!-- Site Scripts -->
-    <script src="assets/scripts/functions.js"></script>
-    <script src="assets/scripts/callbacks.js"></script>
+    <script src="assets/scripts/js-scripts.js"></script>
 </head>
 <body>
     <div class="container" id="app">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <!-- Barra de navegação -->
+            <!-- Navigation bar -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>        
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav justify-content-center">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#" v-on:click="whoAmI()">QUEM SOU EU<span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" v-on:[eventname]="updateArticle(whoAmITitle, whoAmIContent)">Quem sou eu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" v-on:click="whatIDo">O QUE FAÇO</a>
+                    <a class="nav-link" href="#" v-on:[eventname]="updateArticle(whatIDoTitle, whatIDoContent)">O que faço</a>
                 </li>           
                 <li class="nav-item">
-                    <a class="nav-link" href="#" v-on:click="hobbies">HOBBIES</a>
+                    <a class="nav-link" href="#" v-on:[eventname]="updateArticle(hobbiesTitle, hobbiesContent)">Hobbies</a>
                 </li>
                 </ul>
             </div>
@@ -46,36 +45,26 @@
             <div class="row">
                 <div class="col-sm-8">
                     <section class="bg-2">
-                        <!-- Secção de conteúdos dinâmicos -->
+                        <!-- Dynamic content section -->
                         <span>Gil Cunha</span>
                         <article>
-                            <h4 id="articleTitle">Quem Sou Eu</h4>
-                            <p id="articleContent">{{ message }}</p>  
+                            <h4 id="articleTitle">{{ title }}</h4>
+                            <p id="articleContent">{{ content }}</p>  
                         </article>
                     </section>
                 </div>
                 <div class="col-sm-4">
                     <aside class="bg-2">
-                        <!-- Informação sobre o site -->
-                        <h4>Ol@</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non leo a purus lobortis convallis. 
-                            Nunc in est scelerisque est pellentesque interdum nec ut augue. Nulla facilisi. 
-                            Praesent a arcu ultricies, bibendum eros at, aliquam erat. Duis interdum eget odio in vestibulum. 
-                            Integer hendrerit odio sit amet odio lacinia porttitor. Aenean eleifend a augue et lobortis. 
-                            Mauris lacinia diam ut felis sollicitudin consequat. Ut commodo auctor hendrerit. 
-                            Cras ante sapien, dapibus id ante vitae, iaculis malesuada lorem. 
-                            Ut venenatis velit ac purus eleifend, ut dictum lectus dignissim. Ut volutpat scelerisque egestas. 
-                            Morbi orci felis, cursus sed malesuada eu, lobortis ac magna. In sit amet magna quis sem venenatis laoreet. 
-                            Fusce quis lectus enim. Donec magna nulla, tincidunt mattis nibh non, hendrerit porttitor dolor.                            
-                        </p>
+                        <!-- Information about the website -->
+                        <h4>{{ welcomeTitle }}</h4>
+                        <p>{{ welcomeContent }}</p>
                     </aside>
                 </div>
             </div>
         </div>
         
         <footer class="container bg-3">
-            <!-- Rodapé -->
+            <!-- Footer -->
             <div class="row">
                 <div class="col-md-8">
                     <span class="sp-ftr">Seguir</span>
@@ -91,10 +80,10 @@
         </footer>
     </div>
 
-    <!-- Vue Site Scripts -->
+    <!-- Site Vue Scripts -->
     <script src="assets/scripts/vue-scripts.js"></script>
 
-    <!-- Optional JavaScript -->
+    <!-- Bootstrap Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
